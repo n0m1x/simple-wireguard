@@ -1,0 +1,160 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #828282;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f5f1ec;
+    color: #333;
+    line-height: 1.6;
+    margin: 3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #444;
+    margin-bottom: 1rem;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+label, input, button {
+    font-size: 1.1rem;
+}
+
+/* Add user form */
+.add-user {
+    width: 53rem;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-user input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-user input[type="submit"] {
+    padding: 12px;
+    margin-left: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-user input[type="submit"]:hover {
+    background-color: #7acd7e;
+}
+
+.add-user input[type="text"]:hover, .add-user input[type="text"]:active {
+    background-color: #fcfcfb;
+}
+
+/* User list */
+.user-list {
+    width: 53rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.user-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-item:hover {
+    background-color: #fcfcfb;
+}
+
+.user-item label {
+    margin-right: auto;
+}
+
+.user-item form {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+}
+
+.user-item input[type="submit"] {
+    padding: 8px 15px;
+    background-color: white;
+    color: black;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-item input[type="submit"]:hover {
+    background-color: #ec7c7c;
+}
+
+.user-item a {
+    text-decoration: none;
+}
+
+.user-item button {
+    padding: 8px 15px;
+    background-color: white;
+    color: black;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-item button:hover {
+    background-color: #77a7d8;
+}
+
+
+@media (max-width: 1000px) {
+    .add-user {
+        width: 100%;
+        padding: 25px;
+    }
+    .add-user input[type="text"] {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .add-user input[type="submit"] {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .user-list {
+        width: 100%;
+    }
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    label, input, button {
+        font-size: 0.8rem;
+        font-weight: normal;
+    }
+}
