@@ -94,7 +94,7 @@ def restart_service(peers):
     print("service restarting")
     try:
         script = f"""
-        docker stop wireguard || true
+        docker stop simple-wireguard || true
         docker run -d \\
         --rm \\
         --name=simple-wireguard \\
