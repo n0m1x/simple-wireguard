@@ -103,8 +103,16 @@ Yes. The docker container will keep running in the background when the web serve
 
 Stop the container with `docker stop simple-wireguard` and remove it with `docker rm simple-wireguard`. Optionally you can remove the generated Docker image with `docker rmi simple-wireguard`.
 
+- How can I configure DNS?
+
+By default the DNS configuration in /etc/resolv.conf from the host operating system is used. Requests from inside the VPN subnet are forwarded to the host. To change the DNS configuration you can either modify the Docker container configuration, the Coredns configuration used inside the Docker container or the host OS DNS configuration. Please refer to the official documentation.
+
+[LinuxServer Wireguard Docker Image](https://github.com/linuxserver/docker-wireguard)
+
+[Coredns](https://coredns.io/manual/configuration/)
+
 ## Credits
-LinuxServer WireGuard Docker image: https://github.com/linuxserver/docker-wireguard/tree/master
+[LinuxServer Wireguard Docker Image](https://github.com/linuxserver/docker-wireguard)
 
 ## License
 Distributed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html). See LICENSE for more information.

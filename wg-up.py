@@ -15,7 +15,7 @@ import os
 PROXY = True
 
 # wireguard server (full configuration in the docker run command below)
-WG_IP = "127.0.0.1"
+WG_IP = "your_ip"
 PEERS_PATH = "./peers.txt"
 WG_CONFIG_PATH = "./config"
 
@@ -196,7 +196,8 @@ def run():
             errors
             health
             hosts {{
-                10.13.13.1  {DOMAIN_NAME}
+                10.13.13.1 {DOMAIN_NAME}
+                fallthrough
             }}
             forward . /etc/resolv.conf
         }}""")
